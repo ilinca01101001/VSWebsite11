@@ -1,6 +1,6 @@
 async function fetchConnectedHeadsets() {
     try {
-        const response = await fetch('http://localhost:5000/connected_headsets');
+        const response = await fetch('https://ilinca01101001.github.io/VSWebsite11/HTML/connected_headsets');
         const data = await response.json();
         document.getElementById('headsets').innerText = JSON.stringify(data, null, 2);
     } catch (error) {
@@ -11,7 +11,7 @@ async function fetchConnectedHeadsets() {
 
 async function spawnActor() {
     try {
-        const response = await fetch('http://localhost:5000/spawn_actor', {
+        const response = await fetch('https://ilinca01101001.github.io/VSWebsite11/HTML/spawn_actor', {
             method: 'POST'
         });
         if (response.ok) {
